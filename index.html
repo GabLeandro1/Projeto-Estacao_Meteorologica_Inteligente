@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Climático</title>
+    
+    <!--- Icones -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+    <body>
+        <div class="grid-container">
+
+            <!-- Header -->
+            <header class="header">
+                <div class="menu-icon" onclick="OpenSidebar()">
+                    <span class="material-symbols-outlined">menu</span>
+                    
+                
+                </div>
+                <div class="header-left">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <div class="header-right">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined">account_circle</span>
+                </div>
+            </header>
+            <!-- End Header -->
+            
+            <!-- Sidebar -->
+             <aside id="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <span class="material-symbols-outlined">partly_cloudy_day</span> Previsão Precisa
+                    </div>
+                    <span class="material-symbols-outlined" onclick="closeSidebar()">close</span>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-item">
+                        <span class="material-symbols-outlined">analytics</span> Dashboard
+                    </li>
+                </ul>
+             </aside>
+            <!-- End Sidebar -->
+
+            <!-- Main -->
+            <main class="main-conteiner">
+                <div class="main-title">
+                    <h2>Dashboard</h2>
+                </div>
+
+                <!---
+                <div class="main-cards">
+                    <div class="card">
+                        <div class="card-inner">
+                            <h1>250</h1>
+                        </div>
+                    </div>
+                </div>
+                --->
+                <div class="charts">
+                    <div class="charts-card">
+                        <h2 class="chart-title">Temperatura e Umidade ao longo do tempo</h2>
+                        <div id="chart-temp-umidade"></div>
+                    </div>
+                    <div class="charts-card">
+                        <h2 class="chart-title">Pressão atmosférica</h2>
+                        <div id="chart-pressao"></div>
+                    </div>
+                    <div class="charts-card">
+                        <h2 class="chart-title">Dispersão</h2>
+                        <div id="chart-dispersao"></div>
+                    </div>
+                    <div class="charts-card">
+                        <h2 class="chart-title">Luz e Chuva</h2>
+                        <div id="chart-eventos"></div>
+                    </div>
+                </div>
+            </main>
+            <!-- End Main -->
+
+
+        </div>
+        
+        
+        
+        
+        <!-- Scripts -->
+            <!-- PAPAPARSE -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.6.1/papaparse.min.js"></script>
+            <!-- ApexCharts -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/8.3.1/apexcharts.min.js"></script>
+            <!-- JS -->
+                <script src="js/scripts.js"></script>
+    </body>
+</html>
